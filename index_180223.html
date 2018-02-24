@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Webgis conGRUent</title> -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="temp/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="css/samples.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <!-- <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script> -->
+    <script type="text/javascript" src="temp/ol.js"></script>
+
+    <style>
+    /* Vantage full width expand main container width */
+    body.responsive.layout-full #page-wrapper #main .full-container {
+      max-width: 100% !important;
+    }
+    .map {
+      position: relative;
+      height: 600px;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      /* font-size: 0.8em; */
+      font-weight: bold;
+    }
+    .ol-control {
+        position: absolute;
+        background-color: #7b98bc;
+        background-color: rgba(123,152,188,.4);
+        border-radius: 4px;
+        padding: 2px;
+    }
+    .ol-control button {
+      display: block;
+      margin: 1px;
+      padding: 0;
+      color: #000;
+      font-size: 1.14em;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      height: 1.375em;
+      width: 1.375em;
+      line-height: .4em;
+      background-color: #7b98bc;
+      background-color: rgba(0,60,136,.5);
+      border: none;
+      border-radius: 2px;
+    }
+    </style>
+  </head>
+
+<body>
+  <div id="map" class="map"></div>
+    <div id="XX">|||</div>
+    <div id="layerSwitcherBox">
+      <ul id="overlaylayerSwitcher">
+        <li><label><input type="radio" name="overlaygrouplayer" value="0"> OEV / nmV</label></li>
+        <li><label><input type="radio" name="overlaygrouplayer" value="1"> IV</label></li>
+        <li><label><input type="radio" name="overlaygrouplayer" value="2"> Freizeit</label></li>
+        <li><label><input type="radio" name="overlaygrouplayer" value="3"> Energie</label></li>
+      </ul>
+      <ul id="baselayerSwitcher">
+        <li><label><input type="radio" name="baselayer" value="0" checked> Basemap Grau</label></li>
+        <li><label><input type="radio" name="baselayer" value="1"> Basemap Luftbild</label></li>
+        <li><label><input type="radio" name="baselayer" value="2"> OSM</label></li>
+        <li><label><input type="radio" name="baselayer" value="3"> Stamen Toner</label></li>
+      </ul>
+      <ul id="animationlayerSwitcher">
+        <li><label><input type="radio" name="animationLayer" value="0"> Radroute An</label></li>
+        <li><label><input type="radio" name="animationLayer" value="1"> Radroute Aus</label></li>
+          <div id="animationBox">
+            <button id="start-animation">Start Animation</button>
+            <input class="speedSlider" type="range" value="5" min="1" max="20" id="speed" step="1" />
+          </div>
+    </div>
+
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+  </div>
+
+  <script type="text/javascript" src="src/webgis_congruent.js"></script>
+
+  </body>
+</html>
