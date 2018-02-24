@@ -16,7 +16,8 @@ var style = new ol.style.Style({
 });
 
 anfahrtSource = new ol.source.Vector({
-  url: 'https://www.congruent.at/temp/path/anfahrt.geojson',
+  crossOrigin: 'anonymous',
+  url: '../data/pfad/anfahrt.geojson',
   format: new ol.format.GeoJSON()
 });
 
@@ -64,7 +65,7 @@ function addStartEndMarkers() {
       image: new ol.style.Icon({
         anchor: [0.5, 1],
         width: 100,
-        src: 'https://www.congruent.at/temp/icons/bike-icon.png'
+        src: '../data/icons/bike-icon.png'
       })
     }),
     'icon': new ol.style.Style({
@@ -241,7 +242,7 @@ var iconStyle = new ol.style.Style({
     anchor: [0.5, 70],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: 'https://www.congruent.at/temp/icons/ibc_pointer.png'
+    src: '../data/icons/ibc_pointer.png'
   }))
 });
 
