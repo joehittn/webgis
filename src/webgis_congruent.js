@@ -286,7 +286,7 @@ var bmaporthofoto30cmSource = new ol.source.XYZ({
 //   style: 'mapbox://styles/joehittn/cje1q4ki55wtz2sqkbesgw83x'
 // });
 
-// test
+// test2sdasdasd
 
 baselayers[0] = new ol.layer.Tile({
       name: 'bmapgrau',
