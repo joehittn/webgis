@@ -261,7 +261,6 @@ animationlayers[0] = vectorLayerAnfahrt;
 var ogdAttribution = [new ol.Attribution({
   html: '<a href="https://www.data.gv.at"> / OGD-Wien</a>'
 })];
-
 var basemapAttribution = [new ol.Attribution({
   html: '<a href="https://www.basemap.at">basemap.at</a> &copy; <a href="http://creativecommons.org/licenses/by/3.0/at/">CC BY 3.0 AT</a>'
 })];
@@ -271,11 +270,21 @@ var bmapGrauSource = new ol.source.XYZ({
   crossOrigin: 'anonymous',
   url: 'https://maps{1-4}.wien.gv.at/basemap/bmapgrau/normal/google3857/{z}/{y}/{x}.png'
 });
+
 var bmaporthofoto30cmSource = new ol.source.XYZ({
   attributions: basemapAttribution,
   crossOrigin: 'anonymous',
   url: 'https://maps{1-4}.wien.gv.at/basemap/bmaporthofoto30cm/normal/google3857/{z}/{y}/{x}.jpg'
 });
+
+// baselayers[0] = new ol.layer.VectorTile({
+//   opacity: 0.6,
+//   source: new ol.source.VectorTile({
+//     format: new ol.format.MVT(),
+//     url: 'https://api.mapbox.com/styles/v1/joehittn/cje1q4ki55wtz2sqkbesgw83x/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9laGl0dG4iLCJhIjoiY2pjc3RqMjBqMDdzZTMzbW95OHZ1ejh1byJ9.Gjvk7RtS4kfM7jTJGL1Ivg'
+//   }),
+//   style: 'mapbox://styles/joehittn/cje1q4ki55wtz2sqkbesgw83x'
+// });
 
 baselayers[0] = new ol.layer.Tile({
       name: 'bmapgrau',
