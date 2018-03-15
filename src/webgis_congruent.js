@@ -6,6 +6,8 @@ var mapZoom = 15;
 var animationZoom = 15;
 var center = centerCongruent;
 
+//test
+
 <!--ANIMATION START-->
 var style = new ol.style.Style({
   stroke: new ol.style.Stroke({
